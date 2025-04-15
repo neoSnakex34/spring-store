@@ -22,7 +22,6 @@ public class ProductService {
         return new Product(productDTO.getName(), productDTO.getDescription(), productDTO.getPrice());
     }
 
-    // get all products
     public List<ProductDTO> getAllProducts() {
         return productRepository.findAll().stream()
                 .map(this::maptToDTO)
